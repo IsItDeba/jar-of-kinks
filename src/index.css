@@ -1,4 +1,4 @@
-body {
+body, button {
     font-family: 'Noto Serif JP', serif;
     src: url('vendor/Noto_Serif_JP/NotoSerifJP-Regular.otf') format('opentype'),
          url('vendor/Noto_Serif_JP/NotoSerifJP-SemiBold.otf') format('opentype'),
@@ -100,7 +100,7 @@ h3, .kink span {
     background-color: greenyellow;
 }
 
-#link {
+#link, footer button {
     font-weight: 500;
 }
 
