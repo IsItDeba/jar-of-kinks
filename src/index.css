@@ -1,11 +1,18 @@
 body {
-    text-align: center;
     font-family: 'Noto Serif JP', serif;
     src: url('vendor/Noto_Serif_JP/NotoSerifJP-SemiBold.otf') format('opentype'),
          url('vendor/Noto_Serif_JP/NotoSerifJP-Bold.otf') format('opentype'),
          url('vendor/Noto_Serif_JP/NotoSerifJP-Black.otf') format('opentype');
     font-weight: 700;
+    text-align: center;
+
 }
+
+#container {
+    width: 80vw;
+    margin: auto;
+}
+
 h1, h2, h3 {
     margin: 0;
 }
@@ -26,11 +33,6 @@ h2 {
 h3, .kink span {
     font-size: 20px;
 }
-
-#link {
-
-}
-
 
 #kinks {
     display: grid;
