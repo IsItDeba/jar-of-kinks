@@ -30,6 +30,12 @@ function updateUrl() {
     history.pushState(null, "", window.location.pathname + "?" + params.toString());
 }
 
+function copyToClipboard() {
+    html2canvas(document.querySelector("main")).then(function (canvas) {
+        $("#render").attr("src", canvas.toDataURL("image/png"))
+    });
+}
+
 $(document).ready(function() {
 
 
@@ -37,4 +43,5 @@ $(document).ready(function() {
     $(".kink").each(function(e){
         updateJar($(this), 0);  // Update the jar without modifying it
     });
+    $("#share").click(copyToClipboard)
 });

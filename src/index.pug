@@ -9,22 +9,27 @@ html(lang="en")
         title Jar Of Kinks
         link(rel="stylesheet", href="index.css")
     body
-        header 
-            h1 Jar Of Kinks (by @NIHILIST PEACH)
-            h2 but interactive (by Deba)
         main
-            each kink in kinks
-                .kink(id=kink)
-                    .jar
-                        img(src="assets/jar_background.png")
-                        .value
-                    span= kink
-
+            header 
+                h1 Jar Of Kinks (by @NIHILIST PEACH)
+                h2 but interactive (by Deba)
+            
+            #kinks
+                each kink in kinks
+                    .kink(id=kink)
+                        .jar
+                            img(src="assets/jar_background.png")
+                            .value
+                        span= kink
         hr
 
         footer
+            button#share Get shareable image
+            img#render
+            br
             img(src="assets/original_jar_of_kinks.jpg" alt="The original jar of kinks")
         
         script(src="vendor/jquery-3.6.3.min.js")
+        script(src="vendor/html2canvas.min.js")
         script var kinks = !{JSON.stringify(kinks)}
         script(src="index.js") 
