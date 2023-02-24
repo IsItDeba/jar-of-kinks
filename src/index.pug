@@ -11,8 +11,9 @@ html(lang="en")
     body
         main
             header 
-                h1 Jar Of Kinks (by @NIHILIST PEACH)
-                h2 but interactive (by Deba)
+                h1 Jar Of Kinks
+                h2 (Leave a clean copy)
+                h3 @NIHILIST PEACH
             
             #kinks
                 each kink in kinks
@@ -21,13 +22,17 @@ html(lang="en")
                             img(src="assets/jar_background.png")
                             .value
                         span= kink
+            
+            h3 Interactive version from 
+                a(href="https://isitdeba.github.io/jar-of-kinks/") https://isitdeba.github.io/jar-of-kinks/
         hr
 
         footer
             button#share Get shareable image
-            img#render
             br
-            img(src="assets/original_jar_of_kinks.jpg" alt="The original jar of kinks")
+            div
+                img#render
+                img(src="assets/original_jar_of_kinks.jpg" alt="The original jar of kinks")
         
         script(src="vendor/jquery-3.6.3.min.js")
         script(src="vendor/html2canvas.min.js")

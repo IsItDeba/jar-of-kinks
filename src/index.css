@@ -1,3 +1,7 @@
+body {
+    text-align: center;
+}
+
 main {
     width: 80vw;
     margin: auto;
@@ -64,4 +68,17 @@ main {
 .YES {
     height: 90%;
     background-color: greenyellow;
+}
+
+footer button {
+
+}
+
+footer div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+footer div img {
+    width: 40%;
 }
