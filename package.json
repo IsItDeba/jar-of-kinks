@@ -7,7 +7,7 @@
   "license": "MIT",
   "source": "src/index.pug",
   "scripts": {
-    "start": "npx parcel --public-url ./",
+    "start": "npx parcel",
     "build": "npx parcel build --public-url ./"
   },
   "devDependencies": {
