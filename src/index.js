@@ -42,8 +42,15 @@ function reset() {
 }
 
 function renderImage() {
+    // Don't show the underline in the rendered image to remain closer to the original
+    let headerLink = $("h3 a");
+    headerLink.css("text-decoration", "none");
+
     html2canvas(document.querySelector("main")).then(function (canvas) {
-        $("#render").attr("src", canvas.toDataURL("image/png"))
+        $("#render").attr("src", canvas.toDataURL("image/png"));
+
+        // Re-add the underline after rendering
+        headerLink.css("text-decoration", "underline");
     });
 }
 
