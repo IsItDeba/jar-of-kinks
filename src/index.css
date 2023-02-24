@@ -1,0 +1,66 @@
+main {
+    width: 80vw;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    margin: auto;
+}
+
+.kink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.kink * {
+    cursor: pointer;
+}
+
+.jar {
+    position: relative;
+}
+.jar img {
+    position: relative;
+    z-index: 5;
+}
+
+.jar .value {
+    position: absolute;
+    left: 10%;
+    right: 0;
+    bottom: 10%;
+    z-index: 1;
+    max-height: 90%;
+
+}
+
+.jar .value {
+    transition-property: height, background-color;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in-out;
+}
+
+.no {
+    height: 0%;
+    background-color: white;
+}
+
+.maybe {
+    height: 30%;
+    background-color: brown;
+}
+
+.yes {
+    height: 60%;
+    background-color: darkorange;
+}
+
+.YES {
+    height: 90%;
+    background-color: greenyellow;
+}

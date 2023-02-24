@@ -1,0 +1,17 @@
+{
+  "name": "jar-of-kinks",
+  "version": "1.0.0",
+  "description": "Jar Of Kinks but interactive",
+  "repository": "https://github.com/IsItDeba/jar-of-kinks",
+  "author": "isitdebauchery@gmail.com",
+  "license": "MIT",
+  "source": "src/index.pug",
+  "scripts": {
+    "start": "npx parcel",
+    "build": "npx parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.8.3",
+    "parcel": "^2.8.3"
+  }
+}

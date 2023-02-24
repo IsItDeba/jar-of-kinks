@@ -1,0 +1,30 @@
+- var kinks = ["Deep Throating", "Knife Play", "Tickling", "Hair Pulling", "Choking", "Gags", "Overstimulation", "Consensual Non Consent", "Wax Play"];
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Jar Of Kinks
+        link(rel="stylesheet", href="index.css")
+    body
+        header 
+            h1 Jar Of Kinks (by @NIHILIST PEACH)
+            h2 but interactive (by Deba)
+        main
+            each kink in kinks
+                .kink(id=kink)
+                    .jar
+                        img(src="assets/jar_background.png")
+                        .value
+                    span= kink
+
+        hr
+
+        footer
+            img(src="assets/original_jar_of_kinks.jpg" alt="The original jar of kinks")
+        
+        script(src="vendor/jquery-3.6.3.min.js")
+        script var kinks = !{JSON.stringify(kinks)}
+        script(src="index.js") 
