@@ -97,9 +97,6 @@ h3, .kink span {
     background-color: greenyellow;
 }
 
-footer button {
-
-}
 
 footer div {
     display: flex;
@@ -108,4 +105,8 @@ footer div {
 }
 footer div img {
     width: 40%;
+}
+
+#reset {
+    margin-right: 30px;
 }

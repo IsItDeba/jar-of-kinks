@@ -7,7 +7,7 @@ function clickKink(e) {
     updateJar(kinkElement, 1);
 }
 
-function updateJar(kinkElement, modifier=1) {
+function updateJar(kinkElement, modifier=1, override=false) {
     // Get current kink value
     const kinkId = kinkElement.attr("id");
     let currentValue = params.get(kinkId);
@@ -17,6 +17,11 @@ function updateJar(kinkElement, modifier=1) {
     if (newClassIndex >= values.length || currentValue == undefined) { newClassIndex = 0; }
 
     let newValue = values[newClassIndex];
+
+    // Make sure to use !== for type checking. 0 == false & 0 !== false
+    if (override !== false) {
+        newValue = values[override];
+    }
 
     params.set(kinkId, newValue);
 
@@ -30,7 +35,13 @@ function updateUrl() {
     history.pushState(null, "", window.location.pathname + "?" + params.toString());
 }
 
-function copyToClipboard() {
+function reset() {
+    $(".kink").each(function(e){
+        updateJar($(this), 0, 0);  // Update the jar without modifying it
+    });
+}
+
+function renderImage() {
     html2canvas(document.querySelector("main")).then(function (canvas) {
         $("#render").attr("src", canvas.toDataURL("image/png"))
     });
@@ -43,5 +54,6 @@ $(document).ready(function() {
     $(".kink").each(function(e){
         updateJar($(this), 0);  // Update the jar without modifying it
     });
-    $("#share").click(copyToClipboard)
+    $("#reset").click(reset);
+    $("#share").click(renderImage)
 });

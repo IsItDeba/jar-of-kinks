@@ -29,12 +29,18 @@ html(lang="en")
             hr
 
             footer
+                button#reset Reset all values
                 button#share Get shareable image
                 br
                 div
                     img#render
                     img(src="assets/original_jar_of_kinks.jpg" alt="The original jar of kinks")
         
+                span
+                    | View the source code&nbsp;
+                    a(href="https://github.com/IsItDeba/jar-of-kinks") here
+                    | !
+
         script(src="vendor/jquery-3.6.3.min.js")
         script(src="vendor/html2canvas.min.js")
         script var kinks = !{JSON.stringify(kinks)}
