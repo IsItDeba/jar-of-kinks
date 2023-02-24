@@ -14,7 +14,7 @@ function updateJar(kinkElement, modifier=1) {
 
     // Update if need be. If value is at the highest, reset to 0
     let newClassIndex = values.indexOf(currentValue) + modifier;
-    if (newClassIndex >= values.length) { newClassIndex = 0; }
+    if (newClassIndex >= values.length || currentValue == undefined) { newClassIndex = 0; }
 
     let newValue = values[newClassIndex];
 
